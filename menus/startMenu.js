@@ -14,7 +14,7 @@ const {
 	premiumShow,
 	exclusiveShow,
 } = require("./lightShowsMenu");
-const { contactsMenu } = require("./contactsMenu");
+const { contactsMenu, phonesMenu } = require("./contactsMenu");
 const {
 	otherShowsMenu,
 	pixelPoi,
@@ -35,7 +35,12 @@ const {
 	movies,
 	brands,
 } = require("./smPromotionMenu.js");
-const { videoProductionMenu, record, montage, turnkey } = require("./videoProductionMenu.js");
+const {
+	videoProductionMenu,
+	record,
+	montage,
+	turnkey,
+} = require("./videoProductionMenu.js");
 
 const startMenu = new Menu("startMenu")
 	.text(
@@ -163,6 +168,7 @@ startMenu.register([
 	record,
 	montage,
 	turnkey,
+	phonesMenu,
 ]);
 
 module.exports = { startMenu, chooseLanguageMenu };

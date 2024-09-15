@@ -16,7 +16,7 @@ const flagsVideo = InputMediaBuilder.video(
 	"BAACAgIAAxkBAAIBhGbW7dBveK6MLnTrnae-kLMOQ7yrAAKqWQAC9eq4Svhr5LokWUK2NQQ"
 );
 const baseVideo = InputMediaBuilder.video(
-	"BAACAgIAAxkBAAICXWbnETZLxgSPtryr42bykkk2l4OjAAK1WgACaFM4S-F1ZYj-H_T1NgQ"
+	"BAACAgIAAxkBAAIChWbnN2BL4luw5QHBplnrlaFmrZQwAALMUQACaFNAS6mEuAykr0dCNgQ"
 );
 
 const exclusiveVideo = InputMediaBuilder.video(
@@ -81,7 +81,7 @@ const recordVideo = InputMediaBuilder.video(
 	"BAACAgIAAxkBAAICSmbm9xScNvrZ8i0-WW_Y8cUumUuiAAIGWQACaFM4S1wQ-D3uA_VENgQ"
 );
 const turnkeyVideo = InputMediaBuilder.video(
-	"BAACAgIAAxkBAAICVWbm_37nlARh2GwGB1TNLD90OVCcAAINWQACaFM4SwABw3skF35jmDYE"
+	"BAACAgIAAxkBAAICd2bnHp-wQrIstPUKRoNAzZ5Dka4qAAKxUQACaFNAS9JcZW7IeM5dNgQ"
 );
 
 

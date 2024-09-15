@@ -14,6 +14,15 @@ const contactsMenu = new Menu("contacts-menu")
 	.row()
 	.url("VK", "https://vk.com/shinescreed")
 	.row()
+	.row()
+	.text(
+		(ctx) => ctx.t("phone"),
+		async (ctx) => {
+			ctx.menu.nav("phones-menu")
+			await ctx.msg.editCaption(ctx.t("phone_text"));
+		}
+	)
+	.row()
 	.text(
 		(ctx) => ctx.t("back"),
 		async (ctx) => {
@@ -22,4 +31,12 @@ const contactsMenu = new Menu("contacts-menu")
 		}
 	);
 
-module.exports = { contactsMenu };
+const phonesMenu = new Menu("phones-menu").text(
+	(ctx) => ctx.t("back"),
+	async (ctx) => {
+		ctx.menu.nav("contacts-menu")
+		await ctx.msg.editCaption(ctx.t("start"));
+	}
+);
+
+module.exports = { contactsMenu, phonesMenu };

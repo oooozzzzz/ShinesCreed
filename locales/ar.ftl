@@ -185,3 +185,6 @@ more_videos = المزيد من الفيديوهات
 choose_language = اختر اللغة
 video_materials = مواد الفيديو
 photo_materials = مواد الصور
+phone = الهاتف المحمول
+phone_text = +79680306133 Lydia
+ +971585944799 Larion
