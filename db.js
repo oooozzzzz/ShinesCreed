@@ -45,7 +45,7 @@ module.exports.getAllUsers = async () => {
 		const users = await prisma.user.findMany({ select: { tg_id: true } });
 		return users;
 	} catch (error) {
-		return false
+		return false;
 	}
 };
 
@@ -56,8 +56,41 @@ module.exports.addPreference = async ({ preference, tg_id }) => {
 			where: { tg_id: tg_id },
 			data: { preferences: { create: { value: preference } } },
 		});
-		return true
+		return true;
 	} catch (error) {
-		return false
+		return false;
+	}
+};
+
+module.exports.getOwnerPassword = async () => {
+	try {
+		const password = await prisma.password.findUnique({
+			where: { label: "owner" },
+			select: { value: true },
+		});
+		return password.value;
+	} catch (error) {
+		return false;
+	}
+};
+
+module.exports.setPassrword = async (label, value) => {
+	try {
+		await prisma.password.update({ where: { label }, data: { value } });
+	} catch (error) {
+		return false;
+	}
+};
+
+module.exports.getAdminPassword = async () => {
+	try {
+		const password = await prisma.password.findUnique({
+			where: { label: "admin" },
+			select: { value: true },
+		});
+		return password.value;
+	} catch (error) {
+		console.log(error)
+		return false;
 	}
 };
